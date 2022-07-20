@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Poppins:ital@1&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06899549f6.js" crossorigin="anonymous"></script>
+    <title>Match</title>
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* banner styles*/
+
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 90%;
+            height: 70vh;
+            background-color: #161616;
+            display: flex;
+            border-radius: 15px;
+            box-shadow: 8px 8px 8px #c0ccc3;
+        }
+
+        .card-info {
+            width: 50%;
+            height: 100%;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+        }
+
+        .card-title {
+            text-align: center;
+        }
+
+        .card-title>h2 {
+            font-weight: 700;
+            font-size: 40px;
+        }
+
+        .card-span {
+            color: #e617be;
+        }
+
+        .card-title>P {
+            font-weight: 200;
+
+
+        }
+
+
+
+        .watch {
+            text-align: center;
+
+        }
+
+        .button {
+            text-decoration: none;
+            color: white;
+            background-image: linear-gradient(#e6230e, #e35b7f);
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .card-image {
+            width: 50%;
+            height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-image img {
+            width: 70%;
+            height: 100%;
+            object-fit: fill;
+            object-position: right;
+
+
+        }
+
+        /* main styles start */
+        /* options styles */
+
+        main {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .container {
+            width: 90%;
+            height: 100vh;
+            background-color: #ffffff;
+            display: flex;
+            gap: 30px;
+
+        }
+
+        .options {
+            width: 25%;
+            height: 45%;
+            background-color: #161616;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px grey;
+        }
+
+        .options:hover {
+            opacity: .95;
+            box-shadow: 0 15px 15px grey;
+        }
+
+        .match-button {
+            width: 200px;
+            height: 64px;
+
+            border-radius: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+            background-image: linear-gradient(#cc0808, #302f2f);
+        }
+
+
+        .group-button {
+            width: 200px;
+            height: 64px;
+
+            border-radius: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+            box-shadow: inset 0 0 0 #9495eb;
+
+        }
+
+        .blog-button {
+            width: 200px;
+            height: 64px;
+
+            border-radius: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+
+        }
+
+        /* Blog styles */
+        .blogs {
+            width: 75%;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+        .blog {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 15px;
+            box-shadow: 8px 8px 8px grey;
+
+        }
+
+        .blog:hover {
+            opacity: .95;
+            box-shadow: 0 15px 15px grey;
+        }
+
+        .flag {
+            display: flex;
+        }
+
+        .flag img {
+            width 100%
+        }
+
+
+        /* Footer style  */
+        footer {
+            width: 100%;
+            height: 60vh;
+            background-color: black;
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page-footer {
+            width: 80%;
+            height: 20vh;
+        }
+
+        .page-footer h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 5%;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        .page-footer h1:hover {
+            opacity: .75;
+        }
+
+        hr {
+            margin-bottom: 5%;
+        }
+
+        .list {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .list li {
+            list-style: none;
+        }
+
+        .list li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .list li a:hover {
+            opacity: .75;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="banner">
+        <div class="card">
+            <div class="card-info">
+                <div class="card-title">
+                    <h2> <span class="card-span">The Greatest</span> show on the earth</h2>
+                    <p> The biggest and the most famous international tournament of Football is The World Cup which is
+                        organized by FIFA.</p>
+                </div>
+                <div class="watch">
+
+                    <a class="button" href="">Watch live <i class="fa-solid fa-greater-than"></i></a>
+
+                </div>
+            </div>
+            <div class="card-image">
+                <img src="card-image.png" alt="">
+            </div>
+        </div>
+
+
+    </header>
+    <main>
+        <section class="container">
+            <section class="options">
+                <div class="option-button">
+                    <button class="match-button"> Upcoming Match</button>
+                </div>
+                <div class="option-button">
+                    <button class="group-button"> All Groups</button>
+                </div>
+                <div class="option-button">
+                    <button class="blog-button"> Blog</button>
+                </div>
+            </section>
+            <section class="blogs">
+                <div class="blog">
+                    <div class="flag">
+                        <img src="germany Flag.png" alt="Germany flag">
+                        <h3>VS</h3>
+                        <img src="Flag.png" alt="">
+                    </div>
+                    <div class="fixure">
+                        <h3>Germany vs France</h3>
+                        <p>April 01, 2023, 1.00 AM</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="flag">
+                        <img src="germany Flag.png" alt="Germany flag">
+                        <h3>VS</h3>
+                        <img src="Flag.png" alt="">
+                    </div>
+                    <div class="fixure">
+                        <h3>Germany vs France</h3>
+                        <p>April 01, 2023, 1.00 AM</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="flag">
+                        <img src="germany Flag.png" alt="Germany flag">
+                        <h3>VS</h3>
+                        <img src="Flag.png" alt="">
+                    </div>
+                    <div class="fixure">
+                        <h3>Germany vs France</h3>
+                        <p>April 01, 2023, 1.00 AM</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="flag">
+                        <img src="germany Flag.png" alt="Germany flag">
+                        <h3>VS</h3>
+                        <img src="Flag.png" alt="">
+                    </div>
+                    <div class="fixure">
+                        <h3>Germany vs France</h3>
+                        <p>April 01, 2023, 1.00 AM</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="flag">
+                        <img src="germany Flag.png" alt="Germany flag">
+                        <h3>VS</h3>
+                        <img src="Flag.png" alt="">
+                    </div>
+                    <div class="fixure">
+                        <h3>Germany vs France</h3>
+                        <p>April 01, 2023, 1.00 AM</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="flag">
+                        <img src="germany Flag.png" alt="Germany flag">
+                        <h3>VS</h3>
+                        <img src="Flag.png" alt="">
+                    </div>
+                    <div class="fixure">
+                        <h3>Germany vs France</h3>
+                        <p>April 01, 2023, 1.00 AM</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="flag">
+                        <img src="germany Flag.png" alt="Germany flag">
+                        <h3>VS</h3>
+                        <img src="Flag.png" alt="">
+                    </div>
+                    <div class="fixure">
+                        <h3>Germany vs France</h3>
+                        <p>April 01, 2023, 1.00 AM</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="flag">
+                        <img src="germany Flag.png" alt="Germany flag">
+                        <h3>VS</h3>
+                        <img src="Flag.png" alt="">
+                    </div>
+                    <div class="fixure">
+                        <h3>Germany vs France</h3>
+                        <p>April 01, 2023, 1.00 AM</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="flag">
+                        <img src="germany Flag.png" alt="Germany flag">
+                        <h3>VS</h3>
+                        <img src="Flag.png" alt="">
+                    </div>
+                    <div class="fixure">
+                        <h3>Germany vs France</h3>
+                        <p>April 01, 2023, 1.00 AM</p>
+                    </div>
+                </div>
+
+
+            </section>
+        </section>
+
+
+    </main>
+    <footer>
+        <section class="page-footer">
+            <h1>Goal</h1>
+            <hr>
+            <nav class="social">
+                <ul class="list">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms of Service </a></li>
+                    <li><a href="#">Privacy Policy </a></li>
+                    <li><a href="#">Privacy Settings</a></li>
+                    <li><a href="#">Goal App </a></li>
+                    <li><a href="#">Goal Live</a></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+</body>
+
+</html>
